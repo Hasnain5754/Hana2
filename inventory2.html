@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AutoDrive | Home</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            background-image: url(PA11.jpeg);
+
+        }
+
+        /* Header */
+
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7e8e8;
+            color: #333;
+        }
+
+        /* Luxurious Navbar Styling */
+        .luxury-navbar {
+            background: linear-gradient(90deg, #0f0f0f, #1c1c1c);
+            padding: 15px 0;
+            box-shadow: 0 4px 12px rgba(255, 215, 0, 0.1);
+        }
+
+        .luxury-navbar .navbar-brand {
+            font-size: 26px;
+            font-weight: bold;
+            color: gold;
+            font-family: 'Segoe UI', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .luxury-navbar .nav-link {
+            color: #e0e0e0;
+            font-size: 18px;
+            font-weight: 500;
+            margin: 0 12px;
+            transition: color 0.3s ease;
+        }
+
+        .luxury-navbar .nav-link:hover {
+            color: gold;
+            text-shadow: 0 0 5px gold;
+        }
+
+        .navbar-toggler {
+            border-color: gold;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='gold' viewBox='0 0 30 30'%3e%3cpath stroke='gold' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+
+        /* Luxurious Navbar Styling */
+
+
+        .inventory-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+
+        .car-card {
+            background-color: #0c0b0b;
+            color: #e2e0db;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+
+        .car-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .car-card img {
+            width: 100%;
+            height: auto;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+
+        .car-card select,
+        .car-card button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 4px;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .car-card button {
+            background-color: #0a32a0;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .car-card button:hover {
+            background-color: #e67e22;
+        }
+
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .secondheader {
+           text-align: center;
+           background-color: #0a32a0;
+           color: #0a0a0a;
+          
+
+        }
+
+        .btn {
+            background-color: rgb(220, 219, 245);
+            color: #ec7f1a;
+            ;
+        }
+
+        footer {
+            background-color: #111;
+            color: #ccc;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .footer {
+            background-color: #1a1a1a;
+            color: #ccc;
+            padding: 60px 40px 20px;
+            font-size: 15px;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: space-between;
+        }
+
+        .footer-col {
+            flex: 1 1 220px;
+        }
+
+        .footer h4 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer ul li a:hover {
+            color: #f39c12;
+        }
+
+        .contact-info li {
+            margin-bottom: 8px;
+        }
+
+        .social-links {
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin-right: 12px;
+            color: #ccc;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #f39c12;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            margin-top: 40px;
+            color: #888;
+        }
+
+        .btn1 {
+            background-color: #0a0a0a;
+            color: #f0eaee;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            background-color: #0a32a0;
+            color: white;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: background-color 0.5s;
+            align-content: center;
+        }
+
+        .btn:hover {
+            background-color: #e67e22;
+        }
+
+        .btn4 {
+            color: #0a0a0a;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark luxury-navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">AUTO DRIVE</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav mx-auto text-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="inventory2.html">Inventory</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="buy page.HTML">Buy Here</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="our service2.html">Our Service</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="secondheader">
+        <h1>OUR INVENTORY</h1>
+    </header>
+    <main class="inventory-container">
+        <div class="car-card">
+            <img src="assest/client41.jpeg" alt="">
+            <h2>2022 Toyota Camry</h2>
+            <p><strong>Price:</strong> $25,000</p>
+            <p><strong>Mileage:</strong> 15,000 miles</p>
+            <p><strong>Color:</strong> Silver</p>
+            <label for="options">Choose an option:</label>
+            <select id="options" name="options">
+                <option value="option2">installament</option>
+                <option value="option3">on cash</option>
+                <option value="option4">cheque</option>
+            </select>
+            <button class="btn4"><a href="contact.html">Buy Now</a></button>
+        </div>
+
+        <div class="car-card">
+            <img src="assest/client42.jpeg" alt="">
+            <h2>2021 Honda Accord</h2>
+            <p><strong>Price:</strong> $23,500</p>
+            <p><strong>Mileage:</strong> 18,000 miles</p>
+            <p><strong>Color:</strong> Black</p>
+            <label for="options">Choose an option:</label>
+            <select id="options" name="options">
+                <option value="option2">installament</option>
+                <option value="option3">on cash</option>
+                <option value="option4">cheque</option>
+            </select>
+            <button class="btn4"> <a href="contact.html">Buy Now</a></button>
+        </div>
+
+        <div class="car-card">
+            <img src="assest/client43.jpeg" alt="">
+            <h2>2023 Tesla Model 3</h2>
+            <p><strong>Price:</strong> $39,000</p>
+            <p><strong>Mileage:</strong> 5,000 miles</p>
+            <p><strong>Color:</strong> White</p>
+            <label for="options">Choose an option:</label>
+            <select id="options" name="options">
+                <option value="option2">installament</option>
+                <option value="option3">on cash</option>
+                <option value="option4">cheque</option>
+            </select>
+            <button class="btn4"><a href="contact.html">Buy Now</a></button>
+        </div>
+
+
+        <div class="car-card">
+            <img src="assest/client44.jpeg" alt="">
+            <h2>Audi Model 24</h2>
+            <p><strong>Price:</strong> $30,000</p>
+            <p><strong>Mileage:</strong> 5,000 miles</p>
+            <p><strong>Color:</strong> White</p>
+            <label for="options">Choose an option:</label>
+            <select id="options" name="options">
+                <option value="option2">installament</option>
+                <option value="option3">on cash</option>
+                <option value="option4">cheque</option>
+            </select>
+            <button class="btn4"><a href="contact.html">Buy Now</a></button>
+        </div>
+        <div class="car-card">
+            <img src="assest/client45.jpg" alt="">
+            <h2>Toyota Corolla 24</h2>
+            <p><strong>Price:</strong> $43,000</p>
+            <p><strong>Mileage:</strong> 5,000 miles</p>
+            <p><strong>Color:</strong> black</p>
+            <label for="options">Choose an option:</label>
+            <select id="options" name="options">
+                <option value="option2">installament</option>
+                <option value="option3">on cash</option>
+                <option value="option4">cheque</option>
+            </select>
+            <button class="btn4"> <a href="contact.html">Buy Now</a></button>
+        </div>
+        <div class="car-card">
+            <img src="assest/client46.jpeg" alt="">
+            <h2>BMW 7 Series</h2>
+            <p><strong>Price:</strong> $70,000</p>
+            <p><strong>Mileage:</strong> 9,000 miles</p>
+            <p><strong>Color:</strong> grew</p>
+            <label for="options">Choose an option:</label>
+            <select id="options" name="options">
+                <option value="option2">installament</option>
+                <option value="option3">on cash</option>
+                <option value="option4">cheque</option>
+            </select>
+            <button class="btnlast"> <a href="contact.html">Buy Now</a></button>
+        </div>
+        </div>
+
+        <!-- Add more car cards as needed -->
+    </main>
+    <!-- <div id="last button">
+        <a href="buy here.html" class="btn">See More</a>
+    </div> -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>AutoDrive</h4>
+                <p>Your trusted partner for quality cars and unmatched customer service. We make car buying easy and
+                    affordable.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="inventory.html">Inventory</a></li>
+                    <li><a href="#">Financing</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="#">New Car Sales</a></li>
+                    <li><a href="#">Used Car Sales</a></li>
+                    <li><a href="#">Car Financing</a></li>
+                    <li><a href="#">Trade-In Offers</a></li>
+                    <li><a href="#">Vehicle Service</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <ul class="contact-info">
+                    <li>📍 123 AutoDrive Blvd, New York, NY</li>
+                    <li>📞 +1 (800) 123-4567</li>
+                    <li>✉️ support@autodrive.com</li>
+                </ul>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <p>&copy; 2025 AutoDrive. All rights reserved.</p>
+        </div>
+
+
+
+
+
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

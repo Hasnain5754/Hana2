@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AutoDrive | Home</title>
+  <link rel="shortcut icon" href="assest/client100.jfif" type="image/x-icon">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #0c0b0b;
+      background-color: #fcebeb;
+      height: 15vh;
+      width: 100%;
+
+      background-size: cover;
+      background-repeat: no-repeat;
+
+    }
+
+    /* Header */
+      /* Luxurious Navbar Styling */
+    .luxury-navbar {
+      background: linear-gradient(90deg, #0f0f0f, #1c1c1c);
+      padding: 15px 0;
+      box-shadow: 0 4px 12px rgba(255, 215, 0, 0.1);
+    }
+
+    .luxury-navbar .navbar-brand {
+      font-size: 26px;
+      font-weight: bold;
+      color: gold;
+      font-family: 'Segoe UI', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .luxury-navbar .nav-link {
+      color: #e0e0e0;
+      font-size: 18px;
+      font-weight: 500;
+      margin: 0 12px;
+      transition: color 0.3s ease;
+    }
+
+    .luxury-navbar .nav-link:hover {
+      color: gold;
+      text-shadow: 0 0 5px gold;
+    }
+
+    .navbar-toggler {
+      border-color: gold;
+    }
+
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='gold' viewBox='0 0 30 30'%3e%3cpath stroke='gold' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+     /* Luxurious Navbar Styling */
+
+    /* Hero Section */
+    .hero {
+      background-image: url(assest/Flux_Dev_A_sleek_highend_sports_car_on_a_modern_urban_road_at__2.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      height: 80vh;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      color: #ffffff;
+      text-align: center;
+      padding: 0 20px;
+
+      position: relative;
+      z-index: 1;
+
+    }
+
+    .hero-content h1 {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+
+    .hero-content p {
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      background-color: #0a44a0;
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+
+    }
+
+    .btn:hover {
+      background-color: #e67e22;
+    }
+    /* Hero Section */
+    /* ---------------------------------featured cars --------------------------------- */
+    .featured {
+      padding: 60px 40px;
+      text-align: center;
+      background-color: #fff;
+    }
+
+    .featured h2 {
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+
+    .car-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .car-card {
+      background-color: #fefefe;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .car-card:hover {
+      transform: scale(1.03);
+    }
+
+    .car-card img {
+      width: 100%;
+      border-radius: 4px;
+      margin-bottom: 15px;
+    }
+      /* ---------------------------------featured cars --------------------------------- */
+
+   
+
+    .first {
+      background-color: #000000;
+    }
+
+    .testimonial {
+      max-width: 700px;
+      margin: auto;
+      font-style: italic;
+      color: #555;
+    }
+
+    .newsletter input[type="email"] {
+      padding: 10px;
+      width: 250px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .newsletter button {
+      padding: 10px 20px;
+      background-color: #0a44a0;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+
+    .newsletter button:hover {
+      background-color: #e67e22;
+    }
+
+    .cta {
+      background-color: #0a44a0;
+      color: #fff;
+      padding: 60px 40px;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .cta p {
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+
+    .cta a {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #e67e22;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta a:hover {
+      background-color: #f39c12;
+    }
+
+    /* Team & Process Sections */
+    .featured h2 {
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+
+    .car-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .car-card {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .car-card:hover {
+      transform: scale(1.03);
+    }
+
+    .car-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 15px;
+    }
+
+    /* Google Maps Section */
+    iframe {
+      border-radius: 10px;
+      max-width: 100%;
+    }
+
+    /* Team Section (optional tweaks) */
+    .car-card h3 {
+      font-size: 20px;
+      margin-top: 10px;
+      color: #0a44a0;
+    }
+
+    .car-card p {
+      font-size: 16px;
+      color: #555;
+    }
+
+    .service-showcase {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 40px 20px;
+    }
+
+    .service-card {
+      position: relative;
+      width: 300px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .service-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: opacity 0.3s ease;
+    }
+
+    .service-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.4);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .service-card:hover .service-overlay {
+      opacity: 1;
+    }
+
+    .service-overlay h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .service-overlay p {
+      font-size: 16px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .btn-service {
+      background-color: #f39c12;
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 14px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-service:hover {
+      background-color: #e67e22;
+    }
+
+    .text-alignss {
+      background-color: #000000;
+      color: #fefefe;
+    }
+
+    .car-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .car-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .hero-content {
+      animation: fadeIn 1.2s ease forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+    }
+
+    .navbar-brand {
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+
+    .navbar-nav .nav-link {
+      padding: 0.5rem 1rem;
+    }
+
+    .container-fluid {
+      text-align: center;
+      display: flex;
+      color: #49eb18;
+    }
+
+    .map-section {
+      padding: 40px 20px;
+      text-align: center;
+      background-color: #f9f9f9;
+    }
+
+    .map-section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .map-container {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      max-width: 900px;
+      height: 400px;
+      margin: 0 auto;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* -------------- animation-------------------- */
+
+    .blastic-showcase {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      perspective: 2000px;
+      overflow: hidden;
+      color: #0c9bee;
+    }
+
+    .blastic-bg {
+      width: 200px;
+      height: 200px;
+      background-color: steelblue;
+      animation: fadeIn 2s forwards;
+    }
+
+    /* First animation */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Second animation */
+    @keyframes scaleUp {
+      0% {
+        transform: scale(1);
+      }
+
+      100% {
+        transform: scale(1.5);
+      }
+    }
+
+
+    .blastic-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(135deg, rgba(50, 50, 50, 0.8), rgba(20, 20, 20, 0.9));
+      animation: movingBackground 12s linear infinite;
+      z-index: 1;
+    }
+
+    .summary-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 80%;
+      height: 100%;
+      position: relative;
+      z-index: 2;
+    }
+
+    .left-summary,
+    .right-summary {
+      width: 25%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      opacity: 0;
+      transform: translateX(-200px);
+      animation: slideIn 2s ease-in-out forwards;
+    }
+
+    .left-summary {
+      animation-delay: 1s;
+    }
+
+    .right-summary {
+      animation-delay: 1.5s;
+    }
+
+    .summary-item {
+      background: rgba(0, 0, 0, 0.2);
+      padding: 15px 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 0 30px rgba(0, 255, 255, 0.8);
+      opacity: 0;
+      transform: translateY(50px);
+      animation: fadeInUp 1s ease-in-out forwards;
+    }
+
+    .summary-item:nth-child(1) {
+      animation-delay: 1s;
+    }
+
+    .summary-item:nth-child(2) {
+      animation-delay: 1.5s;
+    }
+
+    .summary-item:nth-child(3) {
+      animation-delay: 2s;
+    }
+
+    .car-container {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: carEntrance 3s cubic-bezier(0.25, 0.1, 0.25, 1) forwards, carRotate 6s infinite linear;
+    }
+
+    .car-img {
+      width: 500px;
+      max-width: 100%;
+      filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.8));
+      opacity: 0;
+      animation: carReveal 2s forwards, carGlow 1s ease-in-out infinite;
+    }
+
+    /* Keyframe Animations */
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Animation Triggers */
+    .fade-in {
+      opacity: 0;
+      animation: fadeInUp 1.2s ease forwards;
+    }
+
+    .delay-1 {
+      animation-delay: 0.4s;
+    }
+
+    .delay-2 {
+      animation-delay: 0.8s;
+    }
+
+    .delay-3 {
+      animation-delay: 1.2s;
+    }
+
+    /* Section Background Enhancement */
+    .luxury-summary {
+      background: linear-gradient(120deg, #0f0f0f, #1c1c1c);
+      position: relative;
+      z-index: 1;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* Glowing Background Animation Layer */
+    .luxury-bg-shine {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255, 215, 0, 0.06) 0%, transparent 70%);
+      animation: rotate 20s linear infinite;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* Image Styling */
+    .luxury-img-wrapper {
+      overflow: hidden;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+    }
+
+    .luxury-img {
+      transition: transform 0.6s ease;
+      border-radius: 16px;
+    }
+
+    .luxury-img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Text Enhancements */
+    .luxury-title {
+      color: #ffd700;
+      letter-spacing: 2px;
+    }
+
+    .luxury-text {
+      color: #ddd;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    /* Feature List */
+    .luxury-features li {
+      font-size: 1rem;
+      margin-bottom: 10px;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .luxury-features li:hover {
+      transform: translateX(6px);
+      color: #ffc107;
+    }
+
+    /* Luxury Button */
+    .luxury-btn {
+      border-radius: 30px;
+      font-weight: 600;
+      box-shadow: 0 4px 20px rgba(255, 193, 7, 0.4);
+      transition: all 0.3s ease;
+    }
+
+    .luxury-btn:hover {
+      background-color: #e6b800;
+      box-shadow: 0 6px 30px rgba(255, 193, 7, 0.7);
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in {
+      opacity: 0;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .delay-1 {
+      animation-delay: 0.3s;
+    }
+
+    .delay-2 {
+      animation-delay: 0.6s;
+    }
+
+    .delay-3 {
+      animation-delay: 0.9s;
+    }
+
+    /* Section Background */
+    .luxury-service-section {
+      background: linear-gradient(to right, #0d0d0d, #1a1a1a);
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    /* Section Header */
+    .luxury-heading {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #ffd700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .luxury-subtext {
+      font-size: 1.1rem;
+      color: #ccc;
+      margin-top: 0.5rem;
+    }
+
+    /* Card Styles */
+    .lux-card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .lux-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 25px rgba(255, 215, 0, 0.15);
+    }
+
+    /* Image */
+    .lux-img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .lux-card:hover .lux-img {
+      transform: scale(1.05);
+    }
+
+    /* Content */
+    .lux-content {
+      padding: 20px;
+    }
+
+    .lux-content h3 {
+      font-size: 1.5rem;
+      color: #ffd700;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    .lux-content p {
+      color: #ddd;
+      font-size: 1rem;
+    }
+
+    /* Button */
+    .lux-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      background: #ffd700;
+      color: #000;
+      padding: 10px 25px;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .lux-btn:hover {
+      background: #e6b800;
+      color: #fff;
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+    }
+      header.first {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: #0a0a0a;
+    color: #dd2c15;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.logo img {
+
+  height: 100px;
+  width: auto;
+}
+.luxury-navbar {
+  background: linear-gradient(90deg, #0f0f0f, #1a1a1a);
+  padding: 15px 0;
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.1);
+}
+
+.luxury-navbar .nav-link {
+  color: #e5e5e5;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+.luxury-navbar .nav-link:hover {
+  color: gold;
+  text-shadow: 0 0 5px gold;
+}
+/* ------------------------------foooter--------------------------------- */
+    footer {
+      background-color: #111;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .footer {
+      background-color: #1a1a1a;
+      color: #ccc;
+      padding: 60px 40px 20px;
+      font-size: 15px;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: space-between;
+    }
+
+    .footer-col {
+      flex: 1 1 220px;
+    }
+
+    .footer h4 {
+      color: #fff;
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+
+    .footer ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer ul li a {
+      color: #ccc;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer ul li a:hover {
+      color: #f39c12;
+    }
+
+    .contact-info li {
+      margin-bottom: 8px;
+    }
+
+    .social-links {
+      margin-top: 15px;
+    }
+
+    .social-links a {
+      display: inline-block;
+      margin-right: 12px;
+      color: #ccc;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #f39c12;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      border-top: 1px solid #333;
+      padding-top: 20px;
+      margin-top: 40px;
+      color: #888;
+    }
+    /* ------------------footer-------------- */
+  </style>
+</head>
+
+<body>
+ <nav class="navbar navbar-expand-lg navbar-dark luxury-navbar">
+  <div class="container-fluid">
+
+    <!-- Logo Image -->
+    <a class="navbar-brand" href="index.html">
+      <img src="assest/client99.jfif" alt="AUTO DRIVE Logo" width="40" height="40" class="d-inline-block align-text-top">
+      AUTO DRIVE
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav mx-auto text-center">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="inventory2.html">Inventory</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="buy page.HTML">Buy Here</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="our service2.html">Our Service</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Drive Your Dream Car Today</h1>
+      <p>Explore the best collection of new and used cars at unbeatable prices.</p>
+      <a href="about.html" class="btn"><strong>About Us</strong></a>
+    </div>
+  </section>
+
+  <section class="featured">
+    <h2>Featured Cars</h2>
+    <div class="car-grid">
+      <div class="car-card">
+        <img src="assest/client87.jpeg" alt="">
+        <h3><strong>2022 BMW M4</strong></h3>
+        <p>$72,000</p>
+        <div class="stars">★★★★★</div>
+      </div>
+      <div class="car-card">
+        <img src="assest/client1.jpeg" alt="">
+        <h3><strong>2021 Audi A6</strong>6</h3>
+        <p>$50,000</p>
+        <div class="stars">★★★★★</div>
+      </div>
+      <div class="car-card">
+        <img src="assest/client89.jpeg" alt="">
+        <h3><strong>2023 Tesla Model 3</strong></h3>
+        <p>$46,000</p>
+        <div class="stars">★★★★★</div>
+      </div>
+    </div>
+    <section class="testimonials">
+      <h2>What Our Customers Say</h2>
+      <div class="testimonial">
+        <p><strong>“Buying a car from AutoDrive was a smooth and hassle-free experience. The staff were friendly,
+            knowledgeable, and helped me find the perfect car within my budget!”</p></strong>
+        <p>— Sarah L., New York</p>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <h2>Stay Updated</h2>
+      <p>Subscribe to our newsletter for the latest car deals and news.</p>
+      <form>
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <br>
+      <br>
+      <br>
+      <br>
+    </section>
+    <section class="cta">
+      <h2>Ready to Buy?</h2>
+      <p>Find your perfect car or let our team help you with the process.</p>
+      <a href="contact.html">Contact Our Team</a>
+    </section>
+
+    <!-- Our Process Section -->
+    <section class="featured">
+      <h2>How It Works</h2>
+      <div class="car-grid">
+        <div class="car-card">
+          <img src="assest/client3.jpeg" alt="Step 1">
+          <h3>1. Browse</h3>
+          <p>Explore our inventory to find the car that fits your needs.</p>
+        </div>
+        <div class="car-card">
+          <img src="assest/client4.jpeg" alt="Step 2">
+          <h3>2. Apply</h3>
+          <p>Apply for financing online or in-person. It’s quick and secure.</p>
+        </div>
+        <div class="car-card">
+          <img src="assest/client5.jpeg" alt="Step 3">
+          <h3>3. Drive</h3>
+          <p>Pick up your vehicle and drive away happy. It's that simple.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Google Maps Section -->
+    <section class="map-section">
+      <h2>Our Location</h2>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.916518182796!2d-122.08424968468906!3d37.4220659798257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fba02a3c61837%3A0x37b8f68d30db7a51!2sGoogleplex!5e0!3m2!1sen!2sus!4v1632415647766!5m2!1sen!2sus"
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="featured">
+      <h2>Meet Our Team</h2>
+      <div class="car-grid">
+        <div class="car-card">
+          <img src="assest/client6.jpeg" alt="John - Sales Manager">
+          <h3>Samantha Lee</h3>
+          <p>Sales Manager</p>
+        </div>
+        <div class="car-card">
+          <img src="assest/client7.jpeg" alt="Samantha - Finance Expert">
+          <h3>Jhon Alen</h3>
+          <p>Finance Specialist</p>
+        </div>
+        <div class="car-card">
+          <img src="assest/client8.jpeg" alt="Mike - Service Advisor">
+          <h3>Mike Andrews</h3>
+          <p>Service Advisor</p>
+        </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+ 
+      <section class="luxury-service-section py-5">
+        <div class="container">
+          <div class="text-center mb-5">
+            <h2 class="luxury-heading">Our Premium Services</h2>
+            <p class="luxury-subtext">Crafted for elegance. Delivered with precision.</p>
+          </div>
+
+          <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-md-4">
+              <div class="lux-card fade-in delay-1">
+                <img src="assest/client9.jpeg" alt="Premium Car Wash" class="lux-img">
+                <div class="lux-content">
+                  <h3>Premium Car Wash</h3>
+                  <p>Flawless exterior and interior cleaning that rejuvenates your ride.</p>
+                  <a href="our service2.html" class="lux-btn">Learn More</a>
+                </div>
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col-md-4">
+              <div class="lux-card fade-in delay-2">
+                <img src="assest/client10.jpeg" alt="Vehicle Detailing" class="lux-img">
+                <div class="lux-content">
+                  <h3>Vehicle Detailing</h3>
+                  <p>Interior perfection and exterior brilliance for your luxury car.</p>
+                  <a href="our service2.html" class="lux-btn">Learn More</a>
+                </div>
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col-md-4">
+              <div class="lux-card fade-in delay-3">
+                <img src="assest/client11.jpeg" alt="Roadside Assistance" class="lux-img">
+                <div class="lux-content">
+                  <h3>24/7 Roadside Help</h3>
+                  <p>Immediate, reliable help wherever the road takes you.</p>
+                  <a href="our service2.html" class="lux-btn">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <br>
+      <br>
+      <h1> SOME EXAMPLES</h1>
+
+      <section class="luxury-summary text-white py-5 position-relative overflow-hidden">
+        <div class="luxury-bg-shine"></div> <!-- background glow or shine effect -->
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-6 mb-4 mb-md-0">
+              <div class="luxury-img-wrapper fade-in">
+                <img src="assest/client69.jpeg" alt="Luxury Car" class="img-fluid rounded luxury-img">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h2 class="display-5 fw-bold mb-3 text-uppercase fade-in delay-1 luxury-title">
+                Unleash the Art of Driving
+              </h2>
+              <p class="lead mb-4 fade-in delay-2 luxury-text">
+                Explore a world where performance meets prestige. At <strong>AUTO DRIVE</strong>, we bring you
+                an exclusive selection of luxury vehicles designed for those who demand excellence. Whether it's
+                the roar of a V8 engine or the elegance of a handcrafted interior, your next drive deserves to
+                be extraordinary.
+              </p>
+              <ul class="list-unstyled fade-in delay-3 luxury-features">
+                <li><i class="bi bi-check2-circle text-warning me-2"></i> Hand-picked luxury models</li>
+                <li><i class="bi bi-check2-circle text-warning me-2"></i> Premium interior craftsmanship</li>
+                <li><i class="bi bi-check2-circle text-warning me-2"></i> World-class performance</li>
+                <li><i class="bi bi-check2-circle text-warning me-2"></i> Cutting-edge technology</li>
+              </ul>
+              <a href="buy page.html" class="btn btn-warning btn-lg mt-4 px-4 fade-in delay-3 luxury-btn">Browse
+                Luxury Inventory</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </section>
+    <h2 style="text-align:centers;"><strong>The Cars We Are Selling</strong></h2>
+
+    <div class="car-grid">
+      <!-- Example car cards (repeat for total 20 items) -->
+      <div class="car-card">
+        <img src="assest/client12.jpeg" alt="Ford">
+        <div class="car-name">Ford</div>
+      </div>
+      <div class="car-card">
+        <img src="assest/client13.jpeg" alt="Toyota">
+        <div class="car-name"> <strong>Toyota</strong></div>
+      </div>
+      <div class="car-card">
+        <img src="assest/client14.jpeg" alt="Mercedes">
+        <div class="car-name"> <strong>Mercedes</strong></div>
+      </div>
+      <div class="car-card">
+        <img src="assest/client15.jpeg" alt="Audi">
+        <div class="car-name"><strong>Audi</strong></div>
+      </div>
+      <div class="car-card">
+        <img src="assest/client16.jpeg" alt="BMW">
+        <div class="car-name"><strong>BMW</strong></div>
+      </div>
+
+      <div class="car-card">
+        <img src="assest/client17.jpeg" alt="Chevrolet">
+        <div class="car-name"><strong>Chevrolet</strong></div>
+      </div>
+      <div class="car-card">
+        <img src="assest/client18.jpeg" alt="Honda">
+        <div class="car-name"><strong>Honda</strong></div>
+      </div>
+      <div class="car-card">
+        <img src="assest/client19.jpeg" alt="Kia">
+        <div class="car-name"><strong>Kia</strong></div>
+      </div>
+      <div class="car-card">
+        <img src="assest/client20.jpeg" alt="Nissan">
+        <div class="car-name"><strong>Nissan</strong></div>
+      </div>
+      <div class="car-card">
+        <img src="assest/client21.jpeg" alt="Hyundai">
+        <div class="car-name"><strong>Hyundai</strong></div>
+      </div>
+
+      <div class="car-card">
+        <img src="assest/client22.jpeg" alt="Volkswagen">
+        <div class="car-name"><strong>Volkswagen</strong></div>
+      </div>
+      <div class="car-card">
+        <img src="assest/client23.jpeg" alt="Tesla">
+        <div class="car-name"><strong>Tesla</strong></div>
+      </div>
+      <div class="car-card">
+        <img src="assest/client24.jpeg" alt="Mazda">
+        <div class="car-name"><strong>Mazda</strong></div>
+      </div>
+      <div class="car-card">
+        <img src="assest/client25.jpeg" alt="Subaru">
+        <div class="car-name"><strong>Subaru</strong></div>
+      </div>
+      <div class="car-card">
+        <img src="assest/client27.jpeg" alt="Lexus">
+        <div class="car-name"><strong>Lexus</strong></div>
+      </div>
+
+      <div class="car-card">
+        <img src="assest/client28.jpeg" alt="Peugeot">
+        <div class="car-name"><strong>Peugeot</strong></div>
+      </div>
+      <div class="car-card">
+        <img src="assest/client29.jpeg" alt="Renault">
+        <div class="car-name"><strong>Renault</strong></div>
+      </div>
+      <div class="car-card">
+        <img src="assest/client30.jpeg" alt="Skoda">
+        <div class="car-name"><strong>Skoda</strong></div>
+      </div>
+      <div class="car-card">
+        <img src="assest/client31.jpeg" alt="Fiat">
+        <div class="car-name"><strong>Fiat</strong></div>
+      </div>
+      <div class="car-card">
+        <img src="assest/client32.jpeg" alt="Jeep">
+        <div class="car-name"><strong>Jeep</strong></div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <a href="buy page.html" class="btn">Buy Now</a>
+
+
+  </section>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h4>AutoDrive</h4>
+        <p>Your trusted partner for quality cars and unmatched customer service. We make car buying easy and
+          affordable.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="inventory.html">Inventory</a></li>
+          <li><a href="#">Financing</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="#">New Car Sales</a></li>
+          <li><a href="#">Used Car Sales</a></li>
+          <li><a href="#">Car Financing</a></li>
+          <li><a href="#">Trade-In Offers</a></li>
+          <li><a href="#">Vehicle Service</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <ul class="contact-info">
+          <li>📍 123 AutoDrive Blvd, New York, NY</li>
+          <li>📞 +1 (800) 123-4567</li>
+          <li>✉️ support@autodrive.com</li>
+        </ul>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 AutoDrive. All rights reserved.</p>
+    </div>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

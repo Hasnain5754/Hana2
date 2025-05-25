@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Achievements | [Your Car Brand]</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: gray;
+            color: #333;
+
+
+        }
+
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            background-image: url;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* Luxurious Navbar Styling */
+    .luxury-navbar {
+      background: linear-gradient(90deg, #0f0f0f, #1c1c1c);
+      padding: 15px 0;
+      box-shadow: 0 4px 12px rgba(255, 215, 0, 0.1);
+    }
+
+    .luxury-navbar .navbar-brand {
+      font-size: 26px;
+      font-weight: bold;
+      color: gold;
+      font-family: 'Segoe UI', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .luxury-navbar .nav-link {
+      color: #e0e0e0;
+      font-size: 18px;
+      font-weight: 500;
+      margin: 0 12px;
+      transition: color 0.3s ease;
+    }
+
+    .luxury-navbar .nav-link:hover {
+      color: gold;
+      text-shadow: 0 0 5px gold;
+    }
+
+    .navbar-toggler {
+      border-color: gold;
+    }
+
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='gold' viewBox='0 0 30 30'%3e%3cpath stroke='gold' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+        .hero h1 {
+            color: rgb(0, 0, 0);
+            font-size: 3em;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .achievement {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            margin-bottom: 25px;
+        }
+
+        .achievement h3 {
+            color: #0056b3;
+            margin-bottom: 10px;
+        }
+
+        .achievement p {
+            margin: 0;
+        }
+
+        @media screen and (max-width: 768px) {
+            .hero h1 {
+                font-size: 2em;
+                padding: 0 10px;
+            }
+        }
+
+        .achievement {
+            background-color: black;
+            color: #f9f9f9;
+        }
+
+        h1 {
+            color: black;
+        }
+
+        .card {
+            background-color: black;
+            color: blanchedalmond;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .icon {
+            font-size: 2rem;
+            color: #3498db;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            margin-top: 0;
+            color: #ff0000;
+        }
+
+        .category {
+            font-size: 1rem;
+            color: #1355d1;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        h6 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 3em;
+            color: #00ffcc;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .card {
+            background: #1a1a1a;
+            border-radius: 15px;
+            width: 300px;
+            padding: 25px;
+            box-shadow: 0 10px 25px rgba(0, 255, 204, 0.2);
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 255, 204, 0.2), transparent 60%);
+            transform: rotate(45deg);
+            animation: pulse 4s infinite linear;
+            z-index: 0;
+        }
+
+        .card-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(0, 255, 204, 0.4);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: #00ffcc;
+            font-size: 1.5em;
+        }
+
+        .card p {
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+
+        @keyframes pulse {
+            0% {
+                transform: rotate(0deg) scale(1);
+            }
+
+            50% {
+                transform: rotate(180deg) scale(1.1);
+            }
+
+            100% {
+                transform: rotate(360deg) scale(1);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .card {
+                width: 100%;
+                max-width: 90%;
+            }
+        }
+
+        p1 {
+            color: black;
+        }
+
+        h1 {
+            font-size: 4rem;
+            color: #fff;
+            letter-spacing: 3px;
+            font-weight: 900;
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            text-transform: uppercase;
+            animation: typing 4s steps(40) 1s 1 normal both, glow 1.5s ease-in-out infinite alternate;
+        }
+
+        /* Typing Animation */
+        @keyframes typing {
+            0% {
+                width: 0;
+            }
+
+            100% {
+                width: 100%;
+            }
+        }
+
+        /* Glowing effect for the text */
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 10px #ff6347, 0 0 20px #ff6347, 0 0 30px #ff6347;
+            }
+
+            50% {
+                text-shadow: 0 0 25px #ff6347, 0 0 50px #ff6347, 0 0 75px #ff6347;
+            }
+
+            100% {
+                text-shadow: 0 0 10px #ff6347, 0 0 20px #ff6347, 0 0 30px #ff6347;
+            }
+        }
+    </style>
+</head>
+
+<body>
+   <nav class="navbar navbar-expand-lg navbar-dark luxury-navbar">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="home.html">AUTO DRIVE</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav mx-auto text-center">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="inventory2.html">Inventory</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="buy page.HTML">Buy Here</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="our service2.html">Our Service</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <!-- Hero Section with Image -->
+    <div class="hero">
+        <h1>Our Journey of Excellence</h1>
+    </div>
+
+    <!-- Achievements List -->
+    <div class="container">
+        <div class="achievement">
+            <h3>🏆 Car of the Year 2024</h3>
+            <p>Won at the Global Auto Awards for design, performance, and innovation.</p>
+        </div>
+        <div class="achievement">
+            <h3>🌍 Worldwide Presence</h3>
+            <p>Now serving in over 25 countries with 150+ dealerships.</p>
+        </div>
+        <div class="achievement">
+            <h3>🔋 EV Breakthrough</h3>
+            <p>Launched the first fully solar-integrated electric vehicle in 2024.</p>
+        </div>
+        <div class="achievement">
+            <h3>🚗 1 Million Vehicles Sold</h3>
+            <p>Celebrated a major sales milestone in early 2025.</p>
+        </div>
+        <div class="achievement">
+            <h3>⭐ Top Customer Rating</h3>
+            <p>Rated 4.9/5 by our loyal customers globally.</p>
+        </div>
+        <div class="container">
+            <h1>🌟 Beyond the Classroom</h1>
+            <p class="subtext">Where learning meets life</p>
+
+            <div class="achievements-grid">
+
+                <div class="card">
+                    <div class="icon"><i class="fas fa-robot"></i></div>
+                    <div class="category">Innovation</div>
+                    <h3>Student-Built Robotics</h3>
+                    <p>Showcased at the State Tech Expo 2024, built entirely after school hours.</p>
+                </div>
+
+                <div class="card">
+                    <div class="icon"><i class="fas fa-gamepad"></i></div>
+                    <div class="category">Creativity</div>
+                    <h3>Custom Video Game</h3>
+                    <p>Developed during weekend coding jams using Unity and C#.</p>
+                </div>
+
+                <div class="card">
+                    <div class="icon"><i class="fas fa-leaf"></i></div>
+                    <div class="category">Sustainability</div>
+                    <h3>Vertical Garden Project</h3>
+                    <p>Designed a working model of an indoor farm for urban spaces.</p>
+                </div>
+
+                <div class="card">
+                    <div class="icon"><i class="fas fa-hand-holding-heart"></i></div>
+                    <div class="category">Community</div>
+                    <h3>Book Drive</h3>
+                    <p>Collected and donated over 1,200 books to schools in need.</p>
+                </div>
+
+                <div class="card">
+                    <div class="icon"><i class="fas fa-award"></i></div>
+                    <div class="category">Recognition</div>
+                    <h3>Young Innovators Grant</h3>
+                    <p>Awarded for the development of an AI chatbot for elderly care.</p>
+                </div>
+
+                <div class="card">
+                    <div class="icon"><i class="fas fa-users"></i></div>
+                    <div class="category">Leadership</div>
+                    <h3>Peer Mentoring</h3>
+                    <p>Students logged over 300 hours helping others succeed academically.</p>
+                </div>
+            </div>
+            <h1> Our Car Achievements</h1>
+            <div class="cards">
+                <div class="card">
+                    <div class="card-content">
+                        <h6>🏆 Best Car of the Year</h6>
+                        <p> <strong>Won the prestigious title for innovation, design, and performance excellence in
+                                2024.</strong>.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h6>🌍 Global Expansion</h6>
+                        <p> <strong>Successfully launched our car in 25+ countries with record-breaking sales
+                                growth</strong>.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h6>⚡ Electric Milestone</h6>
+                        <p><strong>Released our first all-electric car with a 600 km range and 30-minute fast
+                                charging</strong></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h6>🚀 Top Speed Record</h6>
+                        <p><strong>Set a new record for the fastest acceleration in the luxury segment: 0-100 km/h in
+                                2.9s.</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
